@@ -1,0 +1,5 @@
+FROM prefecthq/prefect:2.10.4-python3.10
+COPY . /opt/prefect/pacc-sf-2023-demos/
+WORKDIR /opt/prefect/pacc-sf-2023-demos/
+RUN python -m pip install -r requirements.txt
+

@@ -1,0 +1,58 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+build/
+dist/
+sdist/
+
+# Test artifacts
+.coverage
+.coverage.*.*
+.prefect-results
+.pytest_cache/
+
+# Type checking artifacts
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+
+# IPython
+profile_default/
+ipython_config.py
+*.ipynb_checkpoints/*
+
+# Profiling
+/prof
+
+# Environments
+.python-version
+.env
+.venv
+env/
+venv/
+
+# Documentation artifacts
+docs/api-ref/schema.json
+site/
+.cache/
+
+# UI artifacts
+src/prefect/orion/ui/*
+**/node_modules
+
+# Databases
+*.db
+
+# MacOS
+.DS_Store
+
+# Dask
+dask-worker-space/
+
+# Editors
+.idea/
+.vscode/
