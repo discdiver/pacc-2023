@@ -1,0 +1,10 @@
+deployments:
+- name: buy_deployment
+  entrypoint: buy.py:buy
+  work_pool:
+    name: local-work
+
+- name: sell_deployment
+  entrypoint: sell.py:sell
+  work_pool:
+    name: local-work
