@@ -1,0 +1,20 @@
+deployments:
+  - name: prod-deployment
+    entrypoint: 202/flows.py:pipe
+    work_pool:
+      name: prod-pool
+    pull:
+      - prefect.projects.steps.git_clone_project:
+          repository: https://github.com/discdiver/pacc-london-2023.git
+          branch: prod
+
+  - name: staging-deployment
+    entrypoint: 202/flows2.py:pipe2
+    work_pool:
+      name: staging-pool
+    schedule:
+      interval: 600
+    pull:
+      - prefect.projects.steps.git_clone_project:
+          repository: https://github.com/discdiver/pacc-london-2023.git
+          branch: staging

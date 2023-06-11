@@ -1,5 +1,5 @@
 from pathlib import Path
-from prefect import flow, task
+from prefect import flow
 from prefect_aws.s3 import S3Bucket
 
 
