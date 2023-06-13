@@ -8,10 +8,10 @@ prefect-version: 2.10.13
 build:
     - prefect_docker.projects.steps.build_docker_image:
           requires: prefect-docker>0.1.0
-          image_name: discdiver/demo
+          image_name: discidver/demo
           tag: 0.0.1
           dockerfile: auto
-          push: false
+          push: true
 
 # push section allows you to manage if and how this project is uploaded to remote locations
 push: null
