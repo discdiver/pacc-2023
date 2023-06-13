@@ -9,7 +9,7 @@ def mark_it_down(temp):
     
 ## Recent weather
 
-| Time        | Revenue |
+| Time        | Temperature |
 |:--------------|-------:|
 | Now | {temp} |
 | In 1 hour       | {temp + 2} |

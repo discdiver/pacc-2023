@@ -1,13 +1,12 @@
-description: null
-entrypoint: null
-flow_name: null
-name: null
-parameters: {}
-schedule: null
-tags: []
-version: null
-work_pool:
-  job_variables:
-    image: '{{ image_name }}'
-  name: null
-  work_queue_name: null
+deployments:
+- name: null
+  version: null
+  tags: []
+  description: null
+  schedule: {}
+  flow_name: null
+  entrypoint: null
+  parameters: {}
+  work_pool:
+    job_variables:
+      image: '{{ image_name }}'
