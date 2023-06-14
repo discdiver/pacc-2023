@@ -56,3 +56,9 @@ dask-worker-space/
 # Editors
 .idea/
 .vscode/
+
+# Docker
+Dockerfile
+
+# prefect.yaml
+prefect.yaml
