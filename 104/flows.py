@@ -16,6 +16,7 @@ def formatting(fact: str):
 def pipe():
     fact = fetch_cat_fact()
     formatted_fact = formatting(fact)
+    print(formatted_fact)
 
 
 if __name__ == "__main__":
