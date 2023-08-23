@@ -8,9 +8,11 @@ def my_task():
     return df
 
 
-@flow()
+@flow
 def my_flow():
     res = my_task()
+    return "success"
 
 
-my_flow()
+if __name__ == "__main__":
+    my_flow()
