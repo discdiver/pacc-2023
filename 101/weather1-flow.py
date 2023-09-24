@@ -14,12 +14,12 @@ def fetch_weather(lat: float = 38.9, lon: float = -77.0):
     return most_recent_temp
 
 
-# if __name__ == "__main__":
-#     fetch_weather()
-
 if __name__ == "__main__":
-    fetch_weather.serve(name="deploy-1")
+    fetch_weather()
+
+# if __name__ == "__main__":
+#     fetch_weather.serve(name="deploy-1")
 
 
 # if __name__ == "__main__":
-#     fetch_weather.serve(name="deploy-1",  parameters={"lat": 11, "lon": 12})
+#     fetch_weather.serve(name="deploy3", parameters={"lat": 11, "lon": 12})
