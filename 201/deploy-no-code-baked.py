@@ -3,7 +3,7 @@ from prefect import flow
 
 
 @flow()
-def fetch_weather(lat: float = 3, lon: float = -30):
+def fetch_weather(lat: float = 38.736946, lon: float = -9.142685):
     base_url = "https://api.open-meteo.com/v1/forecast/"
     weather = requests.get(
         base_url,
@@ -15,10 +15,12 @@ def fetch_weather(lat: float = 3, lon: float = -30):
 
 
 if __name__ == "__main__":
-    fetch_weather.deploy(
-        name="scheduled-deploy",
-        image="discdiver/img100:0.1",
-        interval="3600",
+    fetch_weather.from_source(
+        source="https://github.com/discdiver/pacc-2023",
+        entrypoint="deploy-no-code-baked.py:fetch_weather",
+    ), deploy(
+        name="lisbon-weather",
         work_pool_name="dock1",
+        image="discdiver/no-code-image:1.0",
         push=False,
     )
